@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+{% block body_block %}
+
+<div class="container bg-warning my-4">
+    <div class="jumbotron">
+        <h3>Please Signup here</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary" value="SignUp">
+        </form>
+    </div>
+</div>
+{% endblock %}
